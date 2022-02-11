@@ -1,4 +1,15 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body { background-color: black; font-family: 'Tahoma', sans-serif; }
+h1 { color: grey; text-align: center; font-weight: bold; }
+fieldset { background-color: white; border-radius: 20px; margin-left: auto; margin-right:auto; border:0; width: 450px;}
+table { margin: auto; }
+#rate { vertical-align: bottom; width: 150px; }
+tr { margin-left: 10%; margin-right: 10% ;}
+td { padding-top: 5px; }
+#rightTd { width: 220px;}
+select { background-color: white }
+#s1 { background-color: yellow; }
+#s2 { background-color: yellow; }
+#s3 { background-color: yellow; }
+#s4 { background-color: yellow; }
+#buttonCalc { font-size: 12px}
+#principal {width: 170px}

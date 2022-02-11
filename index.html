@@ -1,16 +1,73 @@
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+      <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <form action="script.js">
+          <fieldset>
+            <h1>Simple Interest Calculator</h1>
+            <table>
+              <tr>
+                  <td>Amount</td>
+                  <td><input type="text" id="principal"></td>
+              </tr>
+              <tr>    
+                <td>Interest Rate</td>
+                <td id="rightTd"><input type="range" value=10.5 min=0 max=25 step=0.1 id="rate" oninput="changeInterestRate()">
+                <text id=interestratetext>10.50%</text></td>
+              </tr>
+              <tr>
+                <td>No. of Years</td>
+                <td>
+                  <select id="years">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                    <option value=9>9</option>
+                    <option value=10>10</option>
+                    <option value=11>11</option>
+                    <option value=12>12</option>
+                    <option value=13>13</option>
+                    <option value=14>14</option>
+                    <option value=15>15</option>
+                    <option value=16>16</option>
+                    <option value=17>17</option>
+                    <option value=18>18</option>
+                    <option value=19>19</option>
+                    <option value=20>20</option>
+                    <option value=21>21</option>
+                    <option value=22>22</option>
+                    <option value=23>23</option>
+                    <option value=24>24</option>
+                    <option value=25>25</option>                    
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="button" onclick="compute()" value="Compute Interest" id="buttonCalc"></td>
+              </tr>
+              <tr id="resultsTr" style="display: none;" >
+                <td colspan="2">
+                    <span>If you deposit</span>
+                    <span id="s1"></span><span>,</span><br>
+                    <span>at an interest rate of</span>
+                    <span id="s2"></span><span>.</span><br>
+                    <span>You will receive an amount of</span>
+                    <span id="s3"></span><span>,</span><br>
+                    <span>in the year </span>
+                    <span id="s4"></span>                
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+                </td>
+              </tr>
+            </table>
+            <br><text>© Everyone Can Get Rich</text><br>         
+          </fieldset>
+        </form>
     </body>
 </html>
