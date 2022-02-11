@@ -7,7 +7,8 @@ function compute()
 	let interestCalc = document.getElementById("rate").value/100.;
 	let initialAmount = amount;
 	if ((isNaN(amount)) || (amount == "")) {
-    		alert("Please enter a valid number");    
+    		alert("Please enter a valid number");
+		document.getElementById("principal").focus();
     	} else {
     		if (amount > 0){
         		amount = years * interestCalc * amount;
@@ -17,7 +18,8 @@ function compute()
         		document.getElementById("s4").innerHTML = (year+years);
         		document.getElementById("resultsTr").style.display = "";
 		} else {
-    			alert("Please enter a positive number")
+    			alert("Please enter a positive number");
+			document.getElementById("principal").focus();
     		}
 	}
 }
