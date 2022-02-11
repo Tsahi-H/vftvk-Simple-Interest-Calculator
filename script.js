@@ -7,7 +7,7 @@ function compute()
 	let interestCalc = document.getElementById("rate").value/100.;
 	let initialAmount = amount;
 	if ((isNaN(amount)) || (amount == "")) {
-    		alert("Please enter a valid number");
+    		alert("Please enter a positive number");
 		document.getElementById("principal").focus();
     	} else {
     		if (amount > 0){
