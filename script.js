@@ -9,12 +9,16 @@ function compute()
 	if ((isNaN(amount)) || (amount == "")) {
     		alert("Please enter a valid number");    
     	} else {
-		amount = years * interestCalc * amount;
-		document.getElementById("s1").innerHTML = initialAmount;
-		document.getElementById("s2").innerHTML = Math.round(interest*100) / 100 + "%";
-		document.getElementById("s3").innerHTML = Math.round(amount*100) / 100;
-		document.getElementById("s4").innerHTML = (year+years);
-		document.getElementById("resultsTr").style.display = "";
+    		if (amount > 0){
+        		amount = years * interestCalc * amount;
+        		document.getElementById("s1").innerHTML = initialAmount;
+        		document.getElementById("s2").innerHTML = Math.round(interest*100) / 100 + "%";
+        		document.getElementById("s3").innerHTML = Math.round(amount*100) / 100;
+        		document.getElementById("s4").innerHTML = (year+years);
+        		document.getElementById("resultsTr").style.display = "";
+		} else {
+    			alert("Please enter a positive number")
+    		}
 	}
 }
         
