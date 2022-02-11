@@ -1,3 +1,7 @@
+function init(){
+	document.getElementById("rate").value = 10.5;
+}
+
 function compute()
 {
 	let year = new Date().getFullYear();
